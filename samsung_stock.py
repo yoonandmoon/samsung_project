@@ -43,7 +43,7 @@ for i in range(2,5):
 print(stock)
 df = pd.DataFrame(stock)
 df.to_csv('stock.csv',encoding='utf-8-sig',index=False)
-encoding
+
         
 
 
