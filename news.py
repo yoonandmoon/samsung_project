@@ -13,8 +13,10 @@ soup = BeautifulSoup(response.text,'html.parser')
 for news_item in soup.select('div.list_body ul li'):
     response = requests.get(news_item.select('dt')[1].select_one('a').attrs['href'],headers=headers)
     news_soup = BeautifulSoup(response.text,'html.parser')
-    print(news_soup.select('div.article_info h2.end_tit'))
-    print(news_soup.select('#articlebody'))
+
+    print(news_soup.select('h2#title_area').text)
+    print('')
+    # print(news_soup.select('div.end_body_wrp #articlebody').text)
 
 
     break
