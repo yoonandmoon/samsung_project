@@ -6,11 +6,6 @@ headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537
 response = requests.get(URL,headers=headers)
 bs = BeautifulSoup(response.text,'html.parser')
 
-#column구하기 식
-# list = bs.select('th')
-# for title in list:
-#     column = title.text
-
 stock=[]
 for i in range(2,5):
     url = f'https://finance.naver.com/item/sise_day.naver?code=005930&page={i}'
